@@ -1,10 +1,16 @@
 const toDo = [];
-const txt1 = document.getElementById('texting');
-const bnt1 = document.getElementById('btn');
-const out1 = document.getElementById('output1');
 
-function fun1(){
-    out1.innerHTML = txt1.value;
+const btn = document.getElementById('btn');
+const texting = document.getElementById('texting');
+const printOut= document.getElementById('output1');
+
+
+btn.addEventListener("click", listing);
+
+function listing(){
+    let list = texting.value;
+    toDo.push(list);
+    printOut.innerHTML=toDo;
+    
 };
-
-bnt1.addEventListener('click', fun1);
+console.log(toDo);
