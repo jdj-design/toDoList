@@ -1,14 +1,10 @@
-console.log('My code is running');
+const toDo = [];
+const txt1 = document.getElementById('texting');
+const bnt1 = document.getElementById('btn');
+const out1 = document.getElementById('output1');
 
+function fun1(){
+    out1.innerHTML = txt1.value;
+};
 
-/* below will be the event for 
-clicking the add item*/
-
-const toDoList = [];
-const textField = document.getElementById("textBox");
-const addButton = document.getElementById("addItem");
-
-addButton.addEventListener("click", () =>{
-    const newEntry = textField.value;
-    toDoList.push(newEntry);
-})
+bnt1.addEventListener('click', fun1);
